@@ -1,0 +1,19 @@
+link(rel="stylesheet", href="/css/base.css")
+
+#container
+    h1 The Bitdiddle Biweekly
+
+    for article in articles
+        .article(id=article.bin_id)
+            h2= article.title
+
+            p.byline
+                span.by by Dan Moorehead
+                span.date January 21, 2015
+
+            .content
+
+script.
+    window.bin_ids = !{JSON.stringify(bin_ids)}
+script(src="/js/bitbin.js")
+
