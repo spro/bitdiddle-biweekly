@@ -1,0 +1,8 @@
+set port 8726;
+set baseurl http://localhost:$port;
+set basedir static;
+
+get $baseurl/css/base.css {x-skip-bouncer: true} | write $basedir/css/base.bounced.css;
+get $baseurl/js/bitbin.js {x-skip-bouncer: true} | write $basedir/js/bitbin.bounced.js;
+
+echo "Bounced."
