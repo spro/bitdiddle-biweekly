@@ -18,6 +18,7 @@ app = polar.setup_app
                 ext: 'bounced.js'
             require('metaserve/src/compilers/js/browserify-coffee-jsx')
                 ext: 'coffee'
+                uglify: false
         ]
 
 articles = [
@@ -39,7 +40,7 @@ articles = [
 
 app.get '/', (req, res) ->
     bin_ids = articles.map (a) -> a.bin_id
-    res.render 'article', {articles, bin_ids}
+    res.render 'articles', {articles, bin_ids}
 
 app.start()
 

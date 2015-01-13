@@ -1,6 +1,6 @@
-link(rel="stylesheet", href="/css/base.css")
+extends base
 
-#container
+block content
     h1 The Bitdiddle Biweekly
 
     for article in articles
@@ -13,5 +13,5 @@ link(rel="stylesheet", href="/css/base.css")
 
             .content(data-bin-id=article.bin_id)
 
-script(src="/js/bitbin.js")
+    script(src="/js/bitbin.js")
 
