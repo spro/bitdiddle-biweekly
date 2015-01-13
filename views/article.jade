@@ -4,16 +4,14 @@ link(rel="stylesheet", href="/css/base.css")
     h1 The Bitdiddle Biweekly
 
     for article in articles
-        .article(id=article.bin_id)
+        .article
             h2= article.title
 
             p.byline
                 span.by by Dan Moorehead
                 span.date January 21, 2015
 
-            .content
+            .content(data-bin-id=article.bin_id)
 
-script.
-    window.bin_ids = !{JSON.stringify(bin_ids)}
 script(src="/js/bitbin.js")
 
