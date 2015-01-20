@@ -13,7 +13,7 @@ getWithCredentials = (url, cb) ->
 getBinData = (bin_id, cb) ->
 
     # Get bin.json
-    getWithCredentials "http://bitbin.io/#{bin_id}.json", (data) ->
+    getWithCredentials "http://aaaaaa.bitbin.io/bins/#{bin_id}.json", (data) ->
         console.log data
 
         # Need to pay
